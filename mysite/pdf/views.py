@@ -27,21 +27,6 @@ def accept(request):
     return render(request, 'pdf/accept.html')
 
 
-# def resume(request, id):
-#     user_profile = Profile.objects.get(pk=id)
-#     template = loader.get_template('pdf/resume.html')
-#     html = template.render({'user_profile': user_profile})
-#     options = {
-#         'page-size': 'Letter',
-#         'encoding': "UTF-8",
-#     }
-#     pdf = pdfkit.from_string(html, False, options)
-#     response = HttpResponse(pdf, content_type='application/pdf')
-#     response['Content-Disposition'] = 'attachment'
-#     filename = "resume.pdf"
-#     return response
-
-
 def resume(request, id):
     user_profile = Profile.objects.get(pk=id)
     template = loader.get_template('pdf/resume.html')
@@ -61,7 +46,3 @@ def resume(request, id):
     response['Content-Disposition'] = 'attachment; filename="resume.pdf"'
 
     return response
-
-# path_wkhtmltopdf = r'C:\wkhtmltox\bin\wkhtmltopdf.exe'
-# config = pdfkit.configuration(wkhtmltopdf=path_wkhtmltopdf)
-# pdfkit.from_url("http://google.com", "out.pdf", configuration=config)
