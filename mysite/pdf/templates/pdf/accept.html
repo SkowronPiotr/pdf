@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                
+    <form method="post">
+        {% csrf_token %}
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" name="name">
@@ -31,7 +36,7 @@
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">About you</label>
-            <textarea type="text" class="form-control" id="summary" name="summary">
+            <textarea type="text" class="form-control" id="summary" name="summary"></textarea>
         </div>
         
         <div class="mb-3">
@@ -51,15 +56,18 @@
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Previous work</label>
-            <textarea type="text" class="form-control" id="previous_work" name="previous_work">
+            <textarea type="text" class="form-control" id="previous_work" name="previous_work"></textarea>
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Skills</label>
-            <textarea type="text" class="form-control" id="skills" name="skills">
+            <textarea type="text" class="form-control" id="skills" name="skills"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
