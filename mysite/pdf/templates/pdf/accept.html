@@ -10,54 +10,57 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                
+                        
+            <h1>Please fill out your details</h1>
+            <hr>
+                        
     <form method="POST">
         {% csrf_token %}
         
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Eg John Doe">
         </div>
 
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="text" class="form-control" id="email" name="email">
+            <input type="text" class="form-control" id="email" name="email" placeholder="Eg demo@gmail.com">
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Phone</label>
-            <input type="text" class="form-control" id="phone" name="phone">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Eg 123 456 789">
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">About you</label>
-            <textarea type="text" class="form-control" id="summary" name="summary"></textarea>
+            <textarea type="text" class="form-control" id="summary" name="summary" placeholder="Eg Write something about you"></textarea>
         </div>
         
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Degree</label>
-            <input type="text" class="form-control" id="degree" name="degree">
+            <input type="text" class="form-control" id="degree" name="degree" placeholder="B-Tech Information Technology">
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">School</label>
-            <input type="text" class="form-control" id="school" name="school">
+            <input type="text" class="form-control" id="school" name="school" placeholder="MIT">
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">University</label>
-            <input type="text" class="form-control" id="university" name="university">
+            <input type="text" class="form-control" id="university" name="university" placeholder="MIT">
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Previous work</label>
-            <textarea type="text" class="form-control" id="previous_work" name="previous_work"></textarea>
+            <textarea type="text" class="form-control" id="previous_work" name="previous_work" placeholder="Programmer @XYZ"></textarea>
         </div>
           
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Skills</label>
-            <textarea type="text" class="form-control" id="skills" name="skills"></textarea>
+            <textarea type="text" class="form-control" id="skills" name="skills" placeholder="Python, Java, C++, C#"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import pdfkit
 from django.http import HttpResponse
 from django.template import loader
@@ -24,6 +24,7 @@ def accept(request):
         profile = Profile(name=name, email=email, phone=phone, degree=degree, summary=summary,
                           school=school, university=university, previous_work=previous_work, skills=skills)
         profile.save()
+        return redirect("/list")
     return render(request, 'pdf/accept.html')
 
 
