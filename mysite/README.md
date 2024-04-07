@@ -1,4 +1,4 @@
-CV Generator
+# CV Generator
 
 ## Technologies and tools used in project
 ### Python/Django, HTML, CSS
